@@ -1,7 +1,13 @@
 package lab;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
 public class Main {
-    public int add(int a, int b) {
-        return a + b;
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello Jenkins";
     }
 }
